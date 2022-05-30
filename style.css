@@ -1,5 +1,5 @@
 /* Basic Style */
-.wrapper {
+.todo-app {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -28,7 +28,7 @@
 
 }
 
-.centered-main-page-element {
+.section {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -40,7 +40,7 @@
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.section__new-task-wrapper {
   display: flex;
 }
 
@@ -74,8 +74,7 @@ button:hover {
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+.section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
