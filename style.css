@@ -34,7 +34,7 @@
   margin: 0 auto 0;
 }
 
-.section__task {
+.section__task, .section__new-task-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -74,7 +74,7 @@ button:hover {
 }
 
 /* Heading */
-.section__title {
+.section__title, .section__new-task-title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,7 +84,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.section__task, .section__new-task-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,17 +97,17 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.section__task, .section__new-task-input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.section__new-task-title {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+.section__new-task-input {
   width: 318px;
 }
 
