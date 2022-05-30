@@ -11,13 +11,14 @@
 var taskInput=document.getElementById("section__new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("section__list-todo-tasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var completedTasksHolder=document.getElementById("section__list-completed-tasks");//completed-tasks
 
 
 //New task list item
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.classList.add('section__list-item');
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -33,18 +34,20 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='section__task';
+    label.className='section__task section__label-text';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="section__checkbox";
     editInput.type="text";
-    editInput.className="section__task";
+    editInput.className="section__task section__input-text";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="section__button section__button-edit";
 
     deleteButton.className="section__button section__button-delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="section__button-img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -85,7 +88,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".section__button-edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var containsClass=listItem.classList.contains("section__list-item-edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +102,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("section__list-item-edit");
 };
 
 
