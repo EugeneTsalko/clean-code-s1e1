@@ -173,13 +173,13 @@
   display: none;
 }
 
-.section__list-item-edit
+.section__list-item_edit
 .section__input-text {
   display: inline-block;
   width: 224px;
 }
 
-.section__list-item-edit
+.section__list-item_edit
 .section__label-text {
   display: none;
 }
